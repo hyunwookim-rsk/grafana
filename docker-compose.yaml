@@ -6,6 +6,9 @@ services:
   nginx:
     image: nginx:1.23.1
     restart: always
+    depends_on:
+      - loki
+      - grafana
     networks:
       - sendanywhereNet
     container_name: sendanywhere_nginx_container
