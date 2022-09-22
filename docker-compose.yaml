@@ -42,9 +42,9 @@ services:
     volumes:
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/loki-dashboard_rev1.json:/var/lib/grafana/dashboards/loki-dashboard_rev1.json
-    environment:
-      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/loki-dashboard_rev1.json
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin
+    #environment:
+    #  - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/loki-dashboard_rev1.json
+    #  - GF_SECURITY_ADMIN_USER=admin
+    #  - GF_SECURITY_ADMIN_PASSWORD=admin
     env_file: 
       - ./.env
